@@ -111,7 +111,7 @@ export default function Home() {
      if (error) {
         console.error('Gagal mengambil data dari Supabase:', (error as any).message);
         return;
-      }git add .
+      }
 
       if (supabaseData) {
         const formattedData: CatatanItem[] = supabaseData.map((item: any) => ({
