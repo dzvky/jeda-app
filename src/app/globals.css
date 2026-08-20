@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Memastikan latar belakang mengikuti class dari Next.js / Tailwind */
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Transisi mulus untuk seluruh elemen saat ubah tema */
+body, div, button, input, textarea, section {
+  transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, transform 0.2s ease;
+}
